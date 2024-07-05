@@ -1,17 +1,6 @@
 import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
-  );
-}
-
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import AddTodo from './components/AddTodo';
 import { TodoProvider } from './context/TodoContext';
@@ -26,10 +15,10 @@ const App = () => {
             <li><Link to="/add-todo">Add Todo</Link></li>
           </ul>
         </nav>
-        <Switch>
+        <Routes>
           <Route exact path="/" component={Home} />
           <Route path="/add-todo" component={AddTodo} />
-        </Switch>
+        </Routes>
       </Router>
     </TodoProvider>
   );
