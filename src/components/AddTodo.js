@@ -1,18 +1,18 @@
 import React, { useRef, useContext } from 'react';
 import { TodoContext } from '../context/TodoContext';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AddTodo = () => {
     const { todos, setTodos } = useContext(TodoContext);
     const todoInputRef = useRef();
-    const history = useHistory();
+    const navigate = useNavigate();
 // TODO replace history with something else we learned
     const handleAddTodo = () => {
         const newTodo = todoInputRef.current.value;
         if (newTodo.trim()) {
             setTodos([...todos, newTodo]);
             todoInputRef.current.value = '';
-            history.push('/');
+            navigate('/')
         }
     };
 
