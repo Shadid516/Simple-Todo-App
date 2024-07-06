@@ -17,8 +17,8 @@ const App = () => {
           </ul>
         </nav>
         <Routes>
-          <Route exact path="/" component={Home} />
-          <Route path="/add-todo" component={AddTodo} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/add-todo" element={<AddTodo />} />
         </Routes>
       </Router>
     </TodoProvider>
