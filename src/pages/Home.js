@@ -4,9 +4,9 @@ import { TodoContext } from '../context/TodoContext';
 const Home = () => {
     const { todos } = useContext(TodoContext);
 
-    useEffect(() => {
+    useEffect(() => { //log the list of todos to the console whenever it changes
         console.log('Todos:', todos);
-    }, [todos]);
+    }, [todos]); 
 
     return (
         <div>
@@ -14,6 +14,7 @@ const Home = () => {
             <ul>
                 {todos.map((todo, index) => (
                     <li key={index}>{todo}</li>
+                    <button key={index} onClick={handleDeleteTodo}>Delete</button>
                 ))}
             </ul>
         </div>
