@@ -1,0 +1,180 @@
+/* import sharedstyle from './sharedstyle.module.css'; */
+
+.todo {
+    background-color: #f0f0f0;
+    /* Light gray background */
+    padding: 1rem 2rem;
+    /* Add some padding for aesthetics */
+    border-radius: 5px;
+    /* Rounded corners for a softer look */
+    margin-top: 1rem;
+    /* Add some space above the list */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.todo h1 {
+    font-size: 1.2rem;
+    /* Set heading size */
+    margin: 0 0 0.5rem 0;
+    /* Adjust top and bottom margin */
+    font-weight: bold;
+    /* Make heading bolder */
+}
+
+.todo p {
+    font-size: 0.9rem;
+    /* Set paragraph size slightly smaller */
+    margin: 0;
+    /* Remove default margin */
+    text-align: center;
+    /* Center the text within the empty list area */
+    font-style: italic;
+    /* Add a touch of style with italics */
+    color: #999;
+    /* Gray color for the empty list text */
+}
+
+.todo ul {
+    list-style: none;
+    /* Remove default bullet points */
+    padding: 0;
+    /* Reset default padding */
+    margin: 0;
+    /* Reset default margin */
+}
+
+.todo li {
+    display: flex;
+    /* Arrange list items and buttons horizontally */
+    flex: 0 0 auto;
+    /* Aligns text to left */
+    justify-content: none;
+    /* Distribute items with spacing */
+    align-items: none;
+    /* Align content vertically in the center */
+    margin-bottom: 0.5rem;
+    /* Add some spacing between list items */
+    padding: 0.5rem 1rem;
+    /* Add some padding within list items */
+    border-bottom: 1px solid #ddd;
+    /* Add a subtle bottom border */
+}
+
+.todo li button {
+    /* flex: 1 1 auto; */
+    /* Pushes button allll the way to the right */
+    background-color: #eee;
+    /* Light gray background for buttons */
+    border: 1px solid #ddd;
+    /* Light gray border for buttons */
+    border-radius: 3px;
+    /* Rounded corners for buttons */
+    padding: 0.5rem 1rem;
+    /* Add some padding for buttons */
+    margin-left: 1rem;
+    /* Add some spacing between list text and buttons */
+    cursor: pointer;
+    /* Indicate interactive state on hover */
+    transition: background-color 0.2s ease-in-out;
+    /* Smooth transition on hover */
+}
+
+.todo li button:hover {
+    background-color: #ddd;
+    /* Slightly darker background on hover */
+}
+
+/* Assuming your CSS file is named TodoList.module.css */
+.todo {
+    background-color: #f5f5f5;
+    /* Light gray background */
+    padding: 1rem 2rem;
+    /* Add some padding for aesthetics */
+    border-radius: 5px;
+    /* Rounded corners for a softer look */
+    margin-top: 1rem;
+    /* Add some space above the list */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.todo h1 {
+    font-size: 1.2rem;
+    /* Set heading size */
+    margin: 0 0 0.5rem 0;
+    /* Adjust top and bottom margin */
+    font-weight: bold;
+    /* Make heading bolder */
+}
+
+.todo p {
+    font-size: 0.9rem;
+    /* Set paragraph size slightly smaller */
+    margin: 0;
+    /* Remove default margin */
+    text-align: center;
+    /* Center the text within the empty list area */
+    font-style: italic;
+    /* Add a touch of style with italics */
+    color: #999;
+    /* Gray color for the empty list text */
+}
+
+.todo ul {
+    list-style: none;
+    /* Remove default bullet points */
+    padding: 0;
+    /* Reset default padding */
+    margin: 0;
+    /* Reset default margin */
+}
+
+.todo li {
+    display: flex;
+    /* Arrange list items and buttons horizontally */
+    justify-content: space-between;
+    /* Distribute items with spacing */
+    align-items: center;
+    /* Align content vertically in the center */
+    margin-bottom: 0.5rem;
+    /* Add some spacing between list items */
+    padding: 0.5rem 1rem;
+    /* Add some padding within list items */
+    border-bottom: 1px solid #ddd;
+    /* Remove default dots, add subtle bottom border */
+}
+
+.todo li button {
+    background-color: #3498db;
+    /* Blue background for buttons */
+    color: #fff;
+    /* White text for buttons */
+    border: none;
+    /* Remove default border */
+    border-radius: 10px;
+    /* Rounded corners for buttons */
+    padding: 0.7rem 1.5rem;
+    /* Add some padding for buttons */
+    margin-left: 1rem;
+    /* Add some spacing between list text and buttons */
+    cursor: pointer;
+    /* Indicate interactive state on hover */
+    transition: all 0.2s ease-in-out;
+    /* Transition for hover and animation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.todo li button:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+    /* Slight scale animation on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Increase shadow on hover */
+}
+
+.todo li button:active {
+    transform: translateY(2px);
+    /* Slight downward movement on click */
+}

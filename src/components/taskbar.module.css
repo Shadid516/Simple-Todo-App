@@ -1,0 +1,69 @@
+/* Taskbar Styling */
+.taskbar {
+    background-color: #343a40;
+    /* Dark blue background */
+    color: #fff;
+    /* White text color */
+    display: flex;
+    /* Arrange elements horizontally */
+    justify-content: space-between;
+    /* Distribute items evenly with spacing */
+    align-items: center;
+    /* Align content vertically in the center */
+    padding: 1rem 2rem;
+    /* Add some padding for aesthetics */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    font-family: sans-serif;
+    /* Default sans-serif font for readability */
+}
+
+.taskbar h1 {
+    font-size: 1.5rem;
+    /* Increase heading size slightly */
+    margin: 0;
+    /* Remove default margin for cleaner layout */
+    font-weight: bold;
+    /* Make the heading bolder */
+}
+
+.taskbar p {
+    font-size: 0.8rem;
+    /* Set a smaller size for the descriptive text */
+    margin: 0;
+    /* Remove default margin */
+    font-style: italic;
+    /* Add a touch of style with italics */
+}
+
+.taskbar nav ul {
+    list-style: none;
+    /* Remove default bullet points */
+    padding: 0;
+    /* Reset default padding */
+    margin: 0;
+    /* Reset default margin */
+    display: flex;
+    /* Arrange list items horizontally */
+}
+
+.taskbar nav li {
+    margin-right: 1rem;
+    /* Add some spacing between list items */
+}
+
+.taskbar nav a {
+    color: inherit;
+    /* Inherit text color from taskbar */
+    text-decoration: none;
+    /* Remove underlines from links */
+    font-weight: bold;
+    /* Emphasize link text */
+    transition: color 0.2s ease-in-out;
+    /* Smooth color transition on hover */
+}
+
+.taskbar nav a:hover {
+    color: #f0f0f0;
+    /* Lighter shade of white on hover for better visibility */
+}
