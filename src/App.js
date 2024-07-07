@@ -5,7 +5,6 @@ import TodoAdd from './pages/TodoAdd';
 import Navbar from './components/navbar';
 import React from 'react';
 import { TodoProvider } from './context/TodoContext';
-//import './sharedstyle.module.css';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/add-todo" element={<TodoAdd />} />
-            {/* <Route path="/edit-task/:taskId" element={<ItemEdit />} /> */}
           </Routes>
         </BrowserRouter>
       </TodoProvider>
