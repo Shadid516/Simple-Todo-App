@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { TodoContext } from '../context/TodoContext';
 
 const Home = () => {
-    const { todos } = useContext(TodoContext);
+    const { todos, updateTodo, deleteTodo } = useContext(TodoContext);
 
     useEffect(() => { //log the list of todos to the console whenever it changes
         console.log('Todos:', todos);
@@ -13,8 +13,10 @@ const Home = () => {
             <h1>Todo List</h1>
             <ul>
                 {todos.map((todo, index) => (
-                    <li key={index}>{todo}</li>
-                    <button key={index} onClick={handleDeleteTodo}>Delete</button>
+                    <li key={todo.id}>{todo}
+                        <button onClick={updateTodo(todo.id,'Stub text to test for update')}>Edit</button>
+                        <button onClick={deleteTodo(todo.id)}>Delete</button>
+                    </li>
                 ))}
             </ul>
         </div>
