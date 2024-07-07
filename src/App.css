@@ -1,38 +1,82 @@
+/* General Styles */
 .App {
+  margin: 0 auto;
+  /* Center the content horizontally */
+  /* max-width: 800px; */
+  /* Set a maximum width for responsiveness */
+  /* padding: 1rem; */
+  /* Add some padding for aesthetics */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+h1 {
+  font-size: 1.5rem;
+  /* Set heading size */
+  margin: 0 0 1rem 0;
+  /* Adjust top and bottom margin */
+  font-weight: bold;
+  /* Make headings bolder */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 0.9rem;
+  /* Set paragraph size */
+  margin: 0 0 1rem 0;
+  /* Adjust bottom margin */
+  line-height: 1.5;
+  /* Improve readability with line-height */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style: none;
+  /* Remove default bullet points */
+  padding: 0;
+  /* Reset default padding */
+  margin: 0;
+  /* Reset default margin */
+}
+
+li {
   display: flex;
-  flex-direction: column;
+  /* Arrange list items and buttons horizontally (if needed) */
+  justify-content: space-between;
+  /* Distribute items with spacing (if needed) */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Align content vertically in the center (if needed) */
+  margin-bottom: 0.5rem;
+  /* Add some spacing between list items */
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"] {
+  padding: 0.5rem 1rem;
+  /* Add padding for input fields */
+  border: 1px solid #ccc;
+  /* Add a light border for input fields */
+  border-radius: 3px;
+  /* Rounded corners for input fields */
+  font-size: 1rem;
+  /* Set input text size */
+  margin-right: 1rem;
+  /* Add some spacing between input and button (if needed) */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  padding: 0.5rem 1rem;
+  /* Add padding for buttons */
+  background-color: #ddd;
+  /* Light gray background for buttons */
+  border: none;
+  /* Remove default border */
+  border-radius: 3px;
+  /* Rounded corners for buttons */
+  cursor: pointer;
+  /* Indicate interactive state on hover */
+  transition: background-color 0.2s ease-in-out;
+  /* Smooth transition on hover */
+}
+
+button:hover {
+  background-color: #ccc;
+  /* Slightly darker background on hover */
 }
