@@ -14,16 +14,20 @@ export const TodoProvider = ({ children }) => {
         // Add logic to create a new todo object with id and text
         const textArray = Array.isArray(newText) ? newText : [newText];
         //Validates that input is array
-        newText.forEach(newText => {
-            if (textArray.trim()) {
-                const newTodo = {
-                    id: Date.now(), // Generate a unique id
-                    text: newText,
-                    completed: false, // Initially mark as not completed
-                };
-                setTodos((todos) => [...todos, newTodo]); //Did this workaround to update each time I want to enter a new value.
-            };
-        });
+        let delay = 0;
+        textArray.filter((newText) => newText.trim()) // Filter empty strings
+            .forEach((newText, index) => {
+                setTimeout(() => {
+                    const newTodo = {
+                        id: Date.now(), // Generate a unique id
+                        text: newText,
+                        completed: false,
+                    };
+                    setTodos((prevTodos) => [...prevTodos, newTodo]);
+                }, delay);
+
+                delay += 20; // Increase delay for each item to avoid duplicate ids
+            });
     };
     const updateTodo = (id, updatedText) => {
         // Implement logic to update the todo with the given id
