@@ -1,9 +1,9 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { getTodos, addTodoAPI, updateTodoAPI, deleteTodoAPI } from '../api/todoApi.js'; // API methods
+import { getToken } from '../api/auth'; // Token management
 
 export const TodoContext = createContext({
     todos: [],
-    setTodos: () => { },
     addTodo: () => { },
     updateTodo: () => { },
     deleteTodo: () => { },
@@ -12,12 +12,15 @@ export const TodoContext = createContext({
 export const TodoProvider = ({ children }) => {
     const [todos, setTodos] = useState([]);
 
-    // Fetch todos from the backend when the app starts
+    // Fetch todos from the backend when the component mounts
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const todosData = await getTodos();
-                setTodos(todosData);
+                const token = await getToken();
+                if (token) {
+                    const todosData = await getTodos();
+                    setTodos(todosData);
+                }
             } catch (error) {
                 console.error('Failed to fetch todos', error);
             }

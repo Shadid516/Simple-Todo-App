@@ -27,7 +27,7 @@ const Home = () => {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
-                        {todo.text}
+                        {todo.task}
                         <button onClick={() => enableEditor(todo)}>Edit</button>
                         <button onClick={() => deleteTodo(todo.id)}>Delete</button>
                     </li>
